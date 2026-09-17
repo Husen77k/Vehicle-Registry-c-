@@ -97,19 +97,12 @@ Main functions:
 
 ### Output 1
 
-![Program Output 1](output/output-1.png)
+![Program Output 1](outputs/output-1.png)
 
 ### Output 2
 
-![Program Output 2](output/output-2.png)
+![Program Output 2](outputs/output-2.png)
 
-### Output 3
-
-![Program Output 3](output/output-3.png)
-
-### Output 4
-
-![Program Output 4](output/output-4.png)
 
 > **Note:** Screenshots are stored inside the `output` folder. Make sure the screenshot filenames match the names used above.
 
