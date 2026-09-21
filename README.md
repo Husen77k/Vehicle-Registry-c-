@@ -229,14 +229,6 @@ The system provides a simple menu for performing registry operations.
 
 ![Output 2](outputs/output-2.png)
 
-### Output 3
-
-![Output 3](outputs/output-3.png)
-
-### Output 4
-
-![Output 4](outputs/output-4.png)
-
 ---
 
 ## 📂 Project Structure
