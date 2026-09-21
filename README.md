@@ -1,149 +1,292 @@
-# Railway Reservation System
+# 🚗 Vehicle Registry System
 
-A beginner-friendly **Railway Reservation System** developed in C++ using Object-Oriented Programming (OOP) concepts.
+A simple **Vehicle Registry System in C++** developed as an individual OOP project.
+
+This project demonstrates important Object-Oriented Programming concepts such as **Encapsulation, Inheritance, Classes and Objects, Constructors, Destructors, Static Members, Getters & Setters, and different types of Inheritance**.
+
+---
 
 ## 📌 Project Overview
 
-This project is a menu-driven console application for managing railway train records.
+The Vehicle Registry System allows users to manage different types of vehicles and perform basic registry operations.
 
-The system allows users to:
+The system supports:
 
-* Add new train records
-* Display all train records
-* Search for a train by train number
-* Exit the application
+* Vehicle
+* Car
+* Electric Car
+* Sports Car
+* Sedan
+* SUV
+* Aircraft
+* Flying Car
+* Add Vehicle
+* Display All Vehicles
+* Search Vehicle by ID
+* Menu-Driven Interface
 
-The project also demonstrates classes, objects, constructors, destructors, static members, getters, setters, encapsulation, and an array of objects.
+---
 
 ## 🛠️ Technologies Used
 
 * **Language:** C++
-* **Libraries:** `iostream`, `cstring`
 * **IDE:** Visual Studio Code
-* **Compiler:** C++ Compiler
+* **Compiler:** GCC / G++
+* **Concept:** Object-Oriented Programming
 
-## ✨ Features
+---
 
-### Add New Train Record
+## 🧠 OOP Concepts Used
 
-Enter the:
+### 1. Encapsulation
 
-* Train Number
-* Train Name
-* Source
-* Destination
-* Train Time
+Vehicle information is kept inside classes using private data members.
 
-### Display All Train Records
+Getters and setters are used to access and modify private data.
 
-Displays all train records currently stored in the system.
+---
 
-### Search Train by Number
+### 2. Single Inheritance
 
-Searches for a train using its train number and displays its details when found.
-
-### Initial Records
-
-The system starts with three sample train records.
-
-## 🧱 OOP Concepts Used
-
-* **Class and Objects**
-* **Encapsulation** using private data members
-* **Default Constructor**
-* **Parameterized Constructor**
-* **Destructor**
-* **Static Data Member**
-* **Getters and Setters**
-* **Array of Objects**
-* **Member Functions**
-
-## 🏗️ Class Structure
-
-### `Train`
-
-The `Train` class stores information about an individual train.
-
-It contains:
-
-* Train Number
-* Train Name
-* Source
-* Destination
-* Train Time
-
-It also provides constructors, getters, setters, input, display, and destructor functions.
-
-### `RailwaySystem`
-
-The `RailwaySystem` class manages multiple `Train` objects using an array of 100 trains.
-
-Main functions:
-
-* `addTrain()`
-* `displayAllTrains()`
-* `searchTrainByNumber()`
-
-## 📋 Menu
+`Car` inherits from `Vehicle`.
 
 ```text
-1. Add New Train Record
-2. Display All Train Records
-3. Search Train by Number
-4. Exit
+Vehicle
+   ↓
+  Car
 ```
 
-## 📸 Program Output
+---
+
+### 3. Multilevel Inheritance
+
+`ElectricCar` inherits from `Car`, and `SportsCar` inherits from `ElectricCar`.
+
+```text
+Vehicle
+   ↓
+  Car
+   ↓
+ElectricCar
+   ↓
+SportsCar
+```
+
+---
+
+### 4. Hierarchical Inheritance
+
+Multiple classes inherit from `Car`.
+
+```text
+       Car
+      /   \
+   Sedan   SUV
+```
+
+---
+
+### 5. Multiple Inheritance
+
+`FlyingCar` inherits from both `Car` and `Aircraft`.
+
+```text
+Car ───────┐
+           ↓
+       FlyingCar
+           ↑
+Aircraft ──┘
+```
+
+---
+
+### 6. Classes and Objects
+
+The project uses different classes to represent different types of vehicles and creates objects from these classes.
+
+---
+
+### 7. Static Member
+
+A static member `totalVehicles` is used to keep track of vehicle objects.
+
+---
+
+### 8. Constructors and Destructor
+
+Constructors are used to initialize vehicle objects.
+
+A destructor is used when vehicle objects are destroyed.
+
+---
+
+### 9. Getters and Setters
+
+Getter methods are used to retrieve private data, while setter methods are used to modify private data.
+
+---
+
+## 🚘 Vehicle Types
+
+### Vehicle
+
+Base class containing common vehicle information:
+
+* Vehicle ID
+* Vehicle Name
+* Manufacturer
+* Model
+* Year
+
+---
+
+### Car
+
+Inherits from `Vehicle`.
+
+Additional information:
+
+* Fuel Type
+
+---
+
+### Electric Car
+
+Inherits from `Car`.
+
+Additional information:
+
+* Battery Capacity
+
+---
+
+### Sports Car
+
+Inherits from `ElectricCar`.
+
+Additional information:
+
+* Top Speed
+
+---
+
+### Sedan
+
+Inherits from `Car`.
+
+---
+
+### SUV
+
+Inherits from `Car`.
+
+---
+
+### Aircraft
+
+Contains aircraft-specific information:
+
+* Flight Range
+
+---
+
+### Flying Car
+
+Uses multiple inheritance from:
+
+* `Car`
+* `Aircraft`
+
+---
+
+## 📋 Main Features
+
+### Add Vehicle
+
+The user can add different types of vehicles through the menu.
+
+### Display All Vehicles
+
+Displays all registered vehicle records.
+
+### Search Vehicle
+
+The user can search for a vehicle using its Vehicle ID.
+
+### Menu-Driven Interface
+
+The system provides a simple menu for performing registry operations.
+
+---
+
+## 🖥️ Sample Output
 
 ### Output 1
 
-![Program Output 1](outputs/output-1.png)
+![Output 1](outputs/output-1.png)
 
 ### Output 2
 
-![Program Output 2](outputs/output-2.png)
+![Output 2](outputs/output-2.png)
 
+### Output 3
 
-> **Note:** Screenshots are stored inside the `output` folder. Make sure the screenshot filenames match the names used above.
+![Output 3](outputs/output-3.png)
+
+### Output 4
+
+![Output 4](outputs/output-4.png)
+
+---
+
+## 📂 Project Structure
+
+```text
+Vehicle-Registry-System/
+│
+├── outputs/
+│   ├── output-1.png
+│   ├── output-2.png
+│   ├── output-3.png
+│   └── output-4.png
+│
+├── vehicle-registry.cpp
+└── README.md
+```
+
+---
 
 ## ▶️ How to Run
 
-### Compile
+### 1. Clone the Repository
 
 ```bash
-g++ railway-reservation.cpp -o railway-reservation
+git clone https://github.com/Husen77k/Vehicle-Registry-c-.git
 ```
 
-### Run on Windows
+### 2. Open the Project
+
+Open the project folder in Visual Studio Code.
+
+### 3. Compile the Program
 
 ```bash
-railway-reservation.exe
+g++ vehicle-registry.cpp -o vehicle-registry
 ```
 
-### Run on Linux/macOS
+### 4. Run the Program
+
+On Windows:
 
 ```bash
-./railway-reservation
+vehicle-registry
 ```
 
-## 📁 Project Structure
+---
 
-```text
-Railway-System/
-│
-├── railway-reservation.cpp
-├── railway-reservation.exe
-├── README.md
-│
-└── output/
-    ├── output-1.png
-    ├── output-2.png
-    ├── output-3.png
-    └── output-4.png
-```
+## 🎯 Project Objective
 
-## 👨‍💻 Assignment
+The main objective of this project is to understand and implement **Object-Oriented Programming concepts in C++**, especially different types of inheritance and encapsulation, through a simple Vehicle Registry System.
 
-**Railway Reservation System — C++ OOP Assignment**
+---
 
-An individual C++ assignment focused on implementing a railway record management system using fundamental Object-Oriented Programming concepts.
